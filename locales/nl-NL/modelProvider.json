@@ -1,0 +1,176 @@
+{
+  "azure": {
+    "azureApiVersion": {
+      "desc": "De API-versie van Azure, volgt het formaat YYYY-MM-DD, raadpleeg [de nieuwste versie](https://learn.microsoft.com/nl-nl/azure/ai-services/openai/reference#chat-completions)",
+      "fetch": "Lijst ophalen",
+      "title": "Azure API Versie"
+    },
+    "empty": "Voer een model-ID in om het eerste model toe te voegen",
+    "endpoint": {
+      "desc": "Dit waarde kan gevonden worden in de 'Sleutels en eindpunt' sectie wanneer je een bron in Azure Portal controleert",
+      "placeholder": "https://docs-test-001.openai.azure.com",
+      "title": "Azure API Adres"
+    },
+    "modelListPlaceholder": "Selecteer of voeg het OpenAI-model toe dat u hebt ingezet",
+    "title": "Azure OpenAI",
+    "token": {
+      "desc": "Dit waarde kan gevonden worden in de 'Sleutels en eindpunt' sectie wanneer je een bron in Azure Portal controleert. Je kunt KEY1 of KEY2 gebruiken",
+      "placeholder": "Azure API Key",
+      "title": "API Key"
+    }
+  },
+  "bedrock": {
+    "accessKeyId": {
+      "desc": "Voer AWS Access Key Id in",
+      "placeholder": "AWS Access Key Id",
+      "title": "AWS Access Key Id"
+    },
+    "checker": {
+      "desc": "Test of AccessKeyId / SecretAccessKey correct zijn ingevuld"
+    },
+    "region": {
+      "desc": "Voer AWS Region in",
+      "placeholder": "AWS Region",
+      "title": "AWS Region"
+    },
+    "secretAccessKey": {
+      "desc": "Voer AWS Secret Access Key in",
+      "placeholder": "AWS Secret Access Key",
+      "title": "AWS Secret Access Key"
+    },
+    "sessionToken": {
+      "desc": "Als je AWS SSO/STS gebruikt, voer dan je AWS Sessie Token in",
+      "placeholder": "AWS Sessie Token",
+      "title": "AWS Sessie Token (optioneel)"
+    },
+    "title": "Bedrock",
+    "unlock": {
+      "customRegion": "Aangepaste regio",
+      "customSessionToken": "Aangepaste sessietoken",
+      "description": "Voer uw AWS AccessKeyId / SecretAccessKey in om een sessie te starten. De app zal uw verificatiegegevens niet opslaan",
+      "title": "Gebruik aangepaste Bedrock-verificatiegegevens"
+    }
+  },
+  "cloudflare": {
+    "apiKey": {
+      "desc": "Voer Cloudflare API Key in",
+      "placeholder": "Cloudflare API Key",
+      "title": "Cloudflare API Key"
+    },
+    "baseURLOrAccountID": {
+      "desc": "Voer uw Cloudflare-account ID of een custom API-URL in",
+      "placeholder": "Cloudflare-account ID / custom API-URL",
+      "title": "Cloudflare-account ID / API-URL"
+    }
+  },
+  "github": {
+    "personalAccessToken": {
+      "desc": "Vul je Github PAT in, klik [hier](https://github.com/settings/tokens) om er een te maken",
+      "placeholder": "ghp_xxxxxx",
+      "title": "GitHub PAT"
+    }
+  },
+  "huggingface": {
+    "accessToken": {
+      "desc": "Vul je HuggingFace Token in, klik [hier](https://huggingface.co/settings/tokens) om er een te maken",
+      "placeholder": "hf_xxxxxxxxx",
+      "title": "HuggingFace Token"
+    }
+  },
+  "ollama": {
+    "checker": {
+      "desc": "Test of het proxyadres correct is ingevuld",
+      "title": "Connectiviteitscontrole"
+    },
+    "customModelName": {
+      "desc": "Voeg aangepaste modellen toe, gebruik een komma (,) om meerdere modellen te scheiden",
+      "placeholder": "vicuna,llava,codellama,llama2:13b-text",
+      "title": "Aangepaste Modelnamen"
+    },
+    "download": {
+      "desc": "Ollama is het model aan het downloaden, sluit deze pagina alstublieft niet af. Bij een herstart zal het downloaden op de onderbroken plaats verdergaan.",
+      "remainingTime": "Overgebleven tijd",
+      "speed": "Downloadsnelheid",
+      "title": "Model {{model}} wordt gedownload"
+    },
+    "endpoint": {
+      "desc": "Voer het Ollama interface proxyadres in, laat leeg indien niet specifiek aangegeven",
+      "title": "Interface Proxyadres"
+    },
+    "setup": {
+      "cors": {
+        "description": "Vanwege beveiligingsbeperkingen in de browser moet je CORS-configuratie voor Ollama instellen om het correct te kunnen gebruiken.",
+        "linux": {
+          "env": "Voeg `Environment` toe onder de [Service] sectie en voeg de OLLAMA_ORIGINS omgevingsvariabele toe:",
+          "reboot": "Herlaad systemd en herstart Ollama",
+          "systemd": "Roep systemd aan om de ollama service te bewerken:"
+        },
+        "macos": "Open de 'Terminal' applicatie, plak de volgende opdracht en druk op enter om uit te voeren",
+        "reboot": "Herstart de Ollama service na voltooiing",
+        "title": "Configureer Ollama voor cross-origin toegang",
+        "windows": "Op Windows, klik op 'Configuratiescherm', ga naar systeemomgevingsvariabelen bewerken. Maak een nieuwe omgevingsvariabele met de naam 'OLLAMA_ORIGINS' voor je gebruikersaccount, met de waarde *, en klik op 'OK/Toepassen' om op te slaan"
+      },
+      "install": {
+        "description": "Zorg ervoor dat je Ollama hebt ingeschakeld. Als je Ollama nog niet hebt gedownload, ga dan naar de officiële website <1>om te downloaden</1>",
+        "docker": "Als je de voorkeur geeft aan Docker, biedt Ollama ook een officiële Docker-image aan, die je kunt ophalen met de volgende opdracht:",
+        "linux": {
+          "command": "Installeer met de volgende opdracht:",
+          "manual": "Of je kunt de <1>Linux handmatige installatiehandleiding</1> raadplegen voor een handmatige installatie"
+        },
+        "title": "Installeer en start de Ollama applicatie lokaal",
+        "windowsTab": "Windows (previewversie)"
+      }
+    },
+    "title": "Ollama",
+    "unlock": {
+      "cancel": "Annuleer download",
+      "confirm": "Downloaden",
+      "description": "Voer je Ollama model label in om door te gaan met de sessie",
+      "downloaded": "{{completed}} / {{total}}",
+      "starting": "Downloaden starten...",
+      "title": "Download het opgegeven Ollama model"
+    }
+  },
+  "sensenova": {
+    "sensenovaAccessKeyID": {
+      "desc": "Vul je SenseNova Access Key ID in",
+      "placeholder": "SenseNova Access Key ID",
+      "title": "Access Key ID"
+    },
+    "sensenovaAccessKeySecret": {
+      "desc": "Vul je SenseNova Access Key Secret in",
+      "placeholder": "SenseNova Access Key Secret",
+      "title": "Access Key Secret"
+    },
+    "unlock": {
+      "description": "Voer je Access Key ID / Access Key Secret in om de sessie te starten. De applicatie registreert je authenticatie-instellingen niet",
+      "title": "Gebruik aangepaste SenseNova authenticatie-informatie"
+    }
+  },
+  "wenxin": {
+    "accessKey": {
+      "desc": "Vul de Access Key van het Baidu Qianfan-platform in",
+      "placeholder": "Qianfan Access Key",
+      "title": "Access Key"
+    },
+    "checker": {
+      "desc": "Test of de AccessKey / SecretAccess correct is ingevuld"
+    },
+    "secretKey": {
+      "desc": "Vul de Secret Key van het Baidu Qianfan-platform in",
+      "placeholder": "Qianfan Secret Key",
+      "title": "Secret Key"
+    },
+    "unlock": {
+      "customRegion": "Aangepaste servicegebied",
+      "description": "Voer je AccessKey / SecretKey in om de sessie te starten. De applicatie zal je authenticatie-instellingen niet opslaan",
+      "title": "Gebruik aangepaste Wenxin Yiyan-authenticatie-informatie"
+    }
+  },
+  "zeroone": {
+    "title": "01.AI Nul Een Alles"
+  },
+  "zhipu": {
+    "title": "Intelligent Spectrum"
+  }
+}

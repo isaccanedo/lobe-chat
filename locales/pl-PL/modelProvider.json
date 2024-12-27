@@ -1,0 +1,176 @@
+{
+  "azure": {
+    "azureApiVersion": {
+      "desc": "Wersja API Azure, stosuj format YYYY-MM-DD, zobacz [najnowszą wersję](https://learn.microsoft.com/pl-pl/azure/ai-services/openai/reference#chat-completions)",
+      "fetch": "Pobierz listę",
+      "title": "Wersja Azure API"
+    },
+    "empty": "Wprowadź identyfikator modelu, aby dodać pierwszy model",
+    "endpoint": {
+      "desc": "Wartość można znaleźć w sekcji 'Klucze i punkty końcowe' podczas sprawdzania zasobu w portalu Azure",
+      "placeholder": "https://docs-test-001.openai.azure.com",
+      "title": "Adres API Azure"
+    },
+    "modelListPlaceholder": "Wybierz lub dodaj model OpenAI, który wdrożyłeś",
+    "title": "Azure OpenAI",
+    "token": {
+      "desc": "Wartość można znaleźć w sekcji 'Klucze i punkty końcowe' podczas sprawdzania zasobu w portalu Azure. Możesz użyć KEY1 lub KEY2",
+      "placeholder": "Azure API Key",
+      "title": "Klucz API"
+    }
+  },
+  "bedrock": {
+    "accessKeyId": {
+      "desc": "Wprowadź AWS Access Key Id",
+      "placeholder": "AWS Access Key Id",
+      "title": "AWS Access Key Id"
+    },
+    "checker": {
+      "desc": "Test czy AWS AccessKeyId / SecretAccessKey są poprawnie wypełnione"
+    },
+    "region": {
+      "desc": "Wprowadź AWS Region",
+      "placeholder": "AWS Region",
+      "title": "AWS Region"
+    },
+    "secretAccessKey": {
+      "desc": "Wprowadź AWS Secret Access Key",
+      "placeholder": "AWS Secret Access Key",
+      "title": "AWS Secret Access Key"
+    },
+    "sessionToken": {
+      "desc": "Jeśli korzystasz z AWS SSO/STS, wprowadź swój token sesji AWS",
+      "placeholder": "Token sesji AWS",
+      "title": "Token sesji AWS (opcjonalnie)"
+    },
+    "title": "Bedrock",
+    "unlock": {
+      "customRegion": "Niestandardowy region usługi",
+      "customSessionToken": "Niestandardowy token sesji",
+      "description": "Wprowadź swój AWS AccessKeyId / SecretAccessKey, aby rozpocząć sesję. Aplikacja nie będzie przechowywać Twojej konfiguracji uwierzytelniania",
+      "title": "Użyj niestandardowych informacji uwierzytelniających Bedrock"
+    }
+  },
+  "cloudflare": {
+    "apiKey": {
+      "desc": "Wprowadź klucz Cloudflare API Key",
+      "placeholder": "Cloudflare API Key",
+      "title": "Cloudflare API Key"
+    },
+    "baseURLOrAccountID": {
+      "desc": "Wprowadź ID konta Cloudflare lub adres API niestandardowy",
+      "placeholder": "ID konta Cloudflare / adres API niestandardowy",
+      "title": "ID konta Cloudflare / adres API"
+    }
+  },
+  "github": {
+    "personalAccessToken": {
+      "desc": "Wprowadź swój osobisty token dostępu GitHub (PAT), kliknij [tutaj](https://github.com/settings/tokens), aby go utworzyć",
+      "placeholder": "ghp_xxxxxx",
+      "title": "GitHub PAT"
+    }
+  },
+  "huggingface": {
+    "accessToken": {
+      "desc": "Wprowadź swój token HuggingFace, kliknij [tutaj](https://huggingface.co/settings/tokens), aby go utworzyć",
+      "placeholder": "hf_xxxxxxxxx",
+      "title": "Token HuggingFace"
+    }
+  },
+  "ollama": {
+    "checker": {
+      "desc": "Test czy adres proxy jest poprawnie wypełniony",
+      "title": "Sprawdzanie łączności"
+    },
+    "customModelName": {
+      "desc": "Dodaj własny model, oddzielaj modele przecinkiem (,)",
+      "placeholder": "vicuna,llava,codellama,llama2:13b-text",
+      "title": "Nazwa własnego modelu"
+    },
+    "download": {
+      "desc": "Ollama pobiera ten model, proszę nie zamykać tej strony. Wznowienie pobierania nastąpi od miejsca przerwania",
+      "remainingTime": "Pozostały czas",
+      "speed": "Prędkość pobierania",
+      "title": "Pobieranie modelu {{model}}"
+    },
+    "endpoint": {
+      "desc": "Wprowadź adres rest API Ollama, jeśli lokalnie nie określono, pozostaw puste",
+      "title": "Adres proxy API"
+    },
+    "setup": {
+      "cors": {
+        "description": "Z powodu ograniczeń bezpieczeństwa przeglądarki, musisz skonfigurować CORS dla Ollama, aby móc go używać.",
+        "linux": {
+          "env": "Dodaj `Environment` w sekcji [Service], dodaj zmienną środowiskową OLLAMA_ORIGINS:",
+          "reboot": "Przeładuj systemd i uruchom ponownie Ollama",
+          "systemd": "Użyj systemd, aby edytować usługę ollama:"
+        },
+        "macos": "Otwórz aplikację „Terminal” i wklej poniższe polecenie, a następnie naciśnij Enter",
+        "reboot": "Proszę ponownie uruchomić usługę Ollama po zakończeniu",
+        "title": "Konfiguracja Ollama do zezwolenia na dostęp CORS",
+        "windows": "Na Windowsie, kliknij „Panel sterowania”, aby edytować zmienne środowiskowe systemu. Utwórz nową zmienną środowiskową o nazwie „OLLAMA_ORIGINS” dla swojego konta użytkownika, ustaw wartość na *, a następnie kliknij „OK/Zastosuj”, aby zapisać"
+      },
+      "install": {
+        "description": "Proszę upewnić się, że Ollama jest uruchomione, jeśli nie pobrałeś Ollama, odwiedź oficjalną stronę <1>pobierz</1>",
+        "docker": "Jeśli wolisz używać Dockera, Ollama również oferuje oficjalny obraz Dockera, który możesz pobrać za pomocą poniższego polecenia:",
+        "linux": {
+          "command": "Zainstaluj za pomocą poniższego polecenia:",
+          "manual": "Alternatywnie, możesz zapoznać się z <1>podręcznikiem instalacji ręcznej dla Linuxa</1>, aby zainstalować samodzielnie"
+        },
+        "title": "Zainstaluj i uruchom aplikację Ollama lokalnie",
+        "windowsTab": "Windows (wersja podglądowa)"
+      }
+    },
+    "title": "Ollama",
+    "unlock": {
+      "cancel": "Anuluj pobieranie",
+      "confirm": "Pobierz",
+      "description": "Wprowadź etykietę swojego modelu Ollama, aby zakończyć i kontynuować rozmowę",
+      "downloaded": "{{completed}} / {{total}}",
+      "starting": "Rozpoczynam pobieranie...",
+      "title": "Pobierz określony model Ollama"
+    }
+  },
+  "sensenova": {
+    "sensenovaAccessKeyID": {
+      "desc": "Wprowadź SenseNova Access Key ID",
+      "placeholder": "SenseNova Access Key ID",
+      "title": "Access Key ID"
+    },
+    "sensenovaAccessKeySecret": {
+      "desc": "Wprowadź SenseNova Access Key Secret",
+      "placeholder": "SenseNova Access Key Secret",
+      "title": "Access Key Secret"
+    },
+    "unlock": {
+      "description": "Wprowadź swój Access Key ID / Access Key Secret, aby rozpocząć sesję. Aplikacja nie zapisze twojej konfiguracji autoryzacji",
+      "title": "Użyj niestandardowych informacji autoryzacyjnych SenseNova"
+    }
+  },
+  "wenxin": {
+    "accessKey": {
+      "desc": "Wprowadź Access Key z platformy Baidu Qianfan",
+      "placeholder": "Access Key Qianfan",
+      "title": "Access Key"
+    },
+    "checker": {
+      "desc": "Sprawdź, czy AccessKey / SecretAccess zostały poprawnie wprowadzone"
+    },
+    "secretKey": {
+      "desc": "Wprowadź Secret Key z platformy Baidu Qianfan",
+      "placeholder": "Secret Key Qianfan",
+      "title": "Secret Key"
+    },
+    "unlock": {
+      "customRegion": "Niestandardowy obszar usług",
+      "description": "Wprowadź swój AccessKey / SecretKey, aby rozpocząć sesję. Aplikacja nie zapisuje twojej konfiguracji uwierzytelniania",
+      "title": "Użyj niestandardowych informacji uwierzytelniających Wenxin Yiyan"
+    }
+  },
+  "zeroone": {
+    "title": "01.AI Zero Jeden Wszystko"
+  },
+  "zhipu": {
+    "title": "Zhipu"
+  }
+}
